@@ -36,10 +36,6 @@ describe 'Jenkins-KT-Cookbook::default' do
       expect(chef_run).to enable_service("jenkins")
     end
 
-    it 'Java 8 repo should be added' do
-      expect(chef_run).to add_apt_repository("JavaDK8")
-    end
-
     it 'Jenkins repo should be added' do
       expect(chef_run).to add_apt_repository("Jenkins_repo")
     end

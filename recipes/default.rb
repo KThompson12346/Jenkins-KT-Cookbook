@@ -8,12 +8,6 @@ apt_update ("update") do
   action :update
 end
 
-# Add JavaDK 8 repo to list of repos
-apt_repository ("JavaDK8") do
-  uri "ppa:webupd8team/java"
-  action :add
-end
-
 # Install java 8
 package ("openjdk-8-jdk") do
   action :install
